@@ -5,6 +5,7 @@ function Calculator() {
     document.addEventListener('DOMContentLoaded', () => {
   
 //create board
+
 console.log('We have modulization');
 })
 }
