@@ -4,10 +4,10 @@ import Calculator from './components/Calculator';
 
 function App() {
   return (
-    <body className="App">
+    <div className="App">
       <Calculator />
       
-    </body>
+    </div>
   );
 }
 
