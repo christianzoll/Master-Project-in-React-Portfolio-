@@ -2,6 +2,9 @@ body {
   background-color: #202020;
 }
 
+.digitKeys {
+  color:azure;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -5,8 +5,10 @@ import Calculator from './components/Calculator';
 function App() {
   return (
     <div className="App">
+      {/* <Timeline /> */}
+      {/* <ToDoList /> */}
+      {/* <MoneyBuddy /> */}
       <Calculator />
-      
     </div>
   );
 }
