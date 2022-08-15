@@ -9,7 +9,6 @@ function Calculator() {
 
       const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text'); // first/deepest parent
       textElement.setAttribute('fill', 'white');
-      textElement.setAttribute('z-index', 50);
       textElement.setAttribute('alignment-baseline', "middle");
       textElement.setAttribute('text-anchor', "middle");
       textElement.setAttribute('x', 50);
@@ -25,15 +24,12 @@ function Calculator() {
       circle.setAttribute('fill', 'steel') // sibling of first parent
       console.log(circle)
       
-      const gElement = document.createElementNS('http://www.w3.org/2000/svg', 'g')
-      gElement.appendChild(circle);
-      gElement.appendChild(textElement);
-      
       const circlesSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg')//svg elements require createElementNS() (NS = namespace) instead of createElement();
       circlesSVG.setAttribute('id', 'circlesSVG')
       circlesSVG.setAttribute('width', 100)
       circlesSVG.setAttribute('height', 100)
-      circlesSVG.appendChild(gElement)
+      circlesSVG.appendChild(circle);
+      circlesSVG.appendChild(textElement);
       console.log(circlesSVG)
       
       
