@@ -11,8 +11,8 @@ function Calculator() {
       textElement.setAttribute('fill', 'white');
       textElement.setAttribute('alignment-baseline', "middle");
       textElement.setAttribute('text-anchor', "middle");
-      textElement.setAttribute('x', 50);
-      textElement.setAttribute('y', 50);
+      textElement.setAttribute('x', 50.25);
+      textElement.setAttribute('y', 67.25);
       textElement.setAttribute('font-size', 50);
       textElement.appendChild(textNode);  // append deepest child to first parent
       
