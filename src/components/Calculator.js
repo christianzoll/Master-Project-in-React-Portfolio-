@@ -43,6 +43,23 @@ function Calculator() {
     const digitKeys = Array.from(document.querySelectorAll('.digitKey'))
   
     console.log(digitKeys)
+    
+    let n_digitKeys = digitKeys.length;
+    
+    console.log(n_digitKeys)
+    
+    let has_mid = 1; /* 0 if there's no item in the middle, 1 otherwise */
+    
+    console.log(has_mid)
+
+    let m = n_digitKeys- has_mid; /* how many are ON the circle */
+
+    console.log(m)
+
+    let tan = Math.tan(Math.PI/m); /* tangent of half the base angle */
+
+    console.log(tan)
+
   } // end of .addEventListener argument
 
   )} // end of .addEventListener function definition
