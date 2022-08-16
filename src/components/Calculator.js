@@ -39,12 +39,11 @@ function Calculator() {
       App.appendChild(digitKey)
       
     } // end of for loop
-    console.log(typeof textElement)
-    console.log(typeof circle)
-    console.log(typeof digitSVG)
-    console.log(typeof digitKey)
-    console.log(typeof App)
-  } // end of .addEventListener function parameter
+
+    const digitKeys = Array.from(document.querySelectorAll('.digitKey'))
+  
+    console.log(digitKeys)
+  } // end of .addEventListener argument
 
   )} // end of .addEventListener function definition
   
