@@ -8,6 +8,7 @@ function App() {
       {/* <Timeline /> */}
       {/* <ToDoList /> */}
       {/* <MoneyBuddy /> */}
+      {/* <favQuoteAndGifsDB /> */}
       <Calculator />
     </div>
   );

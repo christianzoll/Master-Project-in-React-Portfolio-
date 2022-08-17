@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Circle from './Circle.js'
 function Calculator() {
   document.addEventListener('DOMContentLoaded', () => {
     let digits = 10;
@@ -59,6 +59,11 @@ function Calculator() {
     let tan = Math.tan(Math.PI/m); /* tangent of half the base angle */
 
     console.log(tan)
+
+    let container = document.createElement('div')
+   
+
+    console.log(container)
 
   } // end of .addEventListener argument
 
