@@ -65,6 +65,8 @@ function Calculator() {
 
     console.log(container)
 
+    Circle();
+
   } // end of .addEventListener argument
 
   )} // end of .addEventListener function definition
