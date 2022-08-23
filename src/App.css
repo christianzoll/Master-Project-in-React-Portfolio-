@@ -2,10 +2,102 @@ body {
   background-color: #202020;
 }
 
+.App {
+  position: relative;
+  display: grid;
+  grid-template-areas: 
+  "timeline timeline"
+  "todolist money-buddy";
+  background: inherit;
+  border-radius: 5px;
+  
+}
+
+.timeline{
+  grid-area: timeline;
+}
+
+.money-buddy{
+  grid-area: money-buddy;
+}
+
+.todolist{
+  grid-area: todolist;
+}
+.keyboardDiv{
+  grid-area: keyboardDiv;
+}
+
+.App div {
+  width: 99%;
+  height: 355px;
+  color: #38ed38;
+  margin: 1px;
+  /* padding: 10px; */
+  font-size:4rem;
+  position: relative;
+  z-index: 1;
+/*border*/  overflow: hidden; /* cuts corners off rotating animation */
+}
+
+.App div::after{
+  content: ""; /* places gradient tile behind grid-area */
+  position: absolute;
+  background: #202020;
+/*border*/inset: 1px; /*makes the front div a little smaller than the back div */
+}
+
+.App div::before{
+/*border*/  content: ""; /*gives space to the back div to appear */
+/*border*/ position: absolute;
+/*border*/  width: 100%;
+/*border*/ height: 100%;
+/*border*/ background: linear-gradient(#00ccff, #d400d4);
+/*border*/ animation: animate 125s linear infinite;
+}
+
+/*border*/@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
 .digitKeys {
   color:azure;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,4 +114,4 @@ body {
     transform: rotate(360deg);
   }
 }
-*/
+*/ 

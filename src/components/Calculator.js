@@ -41,6 +41,7 @@ function Calculator() {
     const appsJsReturnDiv = document.querySelector('.App')
       appsJsReturnDiv.appendChild(keyboardDiv)
         console.log(appsJsReturnDiv)
+     
   }
 }
 )}
