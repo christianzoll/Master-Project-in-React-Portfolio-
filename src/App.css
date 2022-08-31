@@ -33,11 +33,10 @@ body {
   height: 355px;
   color: #38ed38;
   margin: 1px;
-  /* padding: 10px; */
   font-size:4rem;
   position: relative;
   z-index: 1;
-/*border*/  overflow: hidden; /* cuts corners off rotating animation */
+/*border*/ overflow: hidden; /* cuts corners off rotating animation */
 }
 
 .App div::after{
@@ -48,9 +47,9 @@ body {
 }
 
 .App div::before{
-/*border*/  content: ""; /*gives space to the back div to appear */
+/*border*/ content: ""; /*gives space to the back div to appear */
 /*border*/ position: absolute;
-/*border*/  width: 100%;
+/*border*/ width: 100%;
 /*border*/ height: 100%;
 /*border*/ background: linear-gradient(#00ccff, #d400d4);
 /*border*/ animation: animate 125s linear infinite;
