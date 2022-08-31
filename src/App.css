@@ -6,8 +6,8 @@ body {
   position: relative;
   display: grid;
   grid-template-areas: 
-  "timeline timeline"
-  "todolist money-buddy";
+  "timeline timeline timeline"
+  "todolist money-buddy calc";
   background: inherit;
   border-radius: 5px;
   
@@ -24,8 +24,8 @@ body {
 .todolist{
   grid-area: todolist;
 }
-.keyboardDiv{
-  grid-area: keyboardDiv;
+.calc{
+  grid-area: calc;
 }
 
 .App div {
