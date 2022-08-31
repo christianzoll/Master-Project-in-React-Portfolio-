@@ -2,7 +2,7 @@ import './App.css';
 import Timeline from './components/Timeline';
 import ToDoList from './components/ToDoList';
 import MoneyBuddy from './components/MoneyBuddy';
-// import Calculator from './components/Calculator';
+import Calc from './components/Calculator';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Timeline />
       <ToDoList />
       <MoneyBuddy />
-      {/* <Calculator /> */}
+      <Calc />
     </div>
   );
 }
