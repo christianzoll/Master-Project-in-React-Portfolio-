@@ -1,9 +1,13 @@
 import React from 'react';
+import { digitKeys } from './digitKeys';
 
-export const Calc = () => {
- <>
- <div id='calc'></div>
- </>
-        
+class Calc extends React.Component {
+    render() {
+        return(
+            <div className="calc"></div>
+        );
+    }
 }
-    
+
+
+export default Calc;
