@@ -6,26 +6,26 @@ body {
   position: relative;
   display: grid;
   grid-template-areas: 
-  "timeline timeline timeline"
-  "money-buddy reminders calc";
+  "timelineGridArea timelineGridArea timelineGridArea"
+  "money-buddyGridArea remindersGridArea calcGridArea";
   background: inherit;
   border-radius: 5px;
   
 }
 
 .timeline{
-  grid-area: timeline;
+  grid-area: timelineGridArea;
 }
 
 .money-buddy{
-  grid-area: money-buddy;
+  grid-area: money-buddyGridArea;
 }
 
 .reminders{
-  grid-area: reminders;
+  grid-area: remindersGridArea;
 }
 .calc{
-  grid-area: calc;
+  grid-area: calcGridArea;
 }
 
 .App div {
