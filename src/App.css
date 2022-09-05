@@ -7,7 +7,7 @@ body {
   display: grid;
   grid-template-areas: 
   "timeline timeline timeline"
-  "todolist money-buddy calc";
+  "money-buddy reminders calc";
   background: inherit;
   border-radius: 5px;
   
@@ -21,8 +21,8 @@ body {
   grid-area: money-buddy;
 }
 
-.todolist{
-  grid-area: todolist;
+.reminders{
+  grid-area: reminders;
 }
 .calc{
   grid-area: calc;
