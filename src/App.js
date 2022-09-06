@@ -1,6 +1,6 @@
 import './App.css';
 import Timeline from './components/Timeline';
-import Reminders from './components/Reminders/Reminders';
+import Reminders from './components/Reminders';
 import MoneyBuddy from './components/MoneyBuddy';
 // import {Calc} from './components/Calc';
 import Calc from './components/Calc';
