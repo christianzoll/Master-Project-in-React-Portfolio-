@@ -23,7 +23,15 @@ body {
 
 .reminders{
   grid-area: remindersGridArea;
+  position: relative;
 }
+
+.reminders form{ /* fixed form from being hidden behind it's parent div */
+  display: flex;
+  position: absolute; /* fixed form from being hidden behind it's parent div */
+  z-index: 9; /* fixed form from being hidden behind it's parent div */
+}
+
 .calc{
   grid-area: calcGridArea;
 }
@@ -33,9 +41,9 @@ body {
   height: 355px;
   color: #38ed38;
   margin: 1px;
-  font-size:4rem;
+  font-size: 4rem;
   position: relative;
-  z-index: 1;
+
 /*border*/ overflow: hidden; /* cuts corners off rotating animation */
 }
 
