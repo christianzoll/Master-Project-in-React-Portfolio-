@@ -14,6 +14,7 @@ function Reminder({ reminder, toggleComplete, removeReminder }) {
       <li
        style={{
         backgroundColor: "rgba(255,255,255, .5)",
+        zIndex: 1000,
         color: "silver",
         textDecoration: reminder.completed ? "line-through": null
        }}
