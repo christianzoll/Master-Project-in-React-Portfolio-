@@ -1,58 +1,65 @@
-// App.js HOC
-import React, { useEffect, useState } from 'react';
-import ReminderForm from './ReminderForm';
-import ReminderList from "./ReminderList";
+import React from "react";
+import ReminderItem from "./ReminderItem/reminderItem";
+import ReminderList from "./ReminderList/reminderList";
+import AddReminder from "./AddReminder/addReminder";
 
-const LOCAL_STORAGE_KEY = "react-reminder-list-reminders";
+class Reminders extends React.Component {
 
-function Reminders(){
-        const [reminders, setReminders] = useState([]);
+//ALRIGHT SO, THIS IS THIS FILE'S SIGNATURE 
+//IN LOCAL STORAGE THIS IS CATEGORIZED AS OUR KEY
+  constructor(){
+    super();
+    this.state = {
+        reminders: []
+    };
+  }
 
-        useEffect(() => {
-          const storageReminders = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-          if (storageReminders) {
-            setReminders(storageReminders);
-          }
-        }, []);
-
-
-
-        useEffect(() => {
-          localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(reminders));
-        }, [reminders]);
-
-        function addReminder(reminder) {
-            setReminders([reminder, ...reminders]);
-        }
-        function toggleComplete(id) {
-            setReminders(
-                reminders.map(reminder => {
-                    if (reminder.id === id) {
-                        return { 
-                            ...reminder,
-                            completed: !reminder.completed
-                        };
-                    }
-                    return reminder;
-                })
-            )
-        }
-
-        function removeReminder(id){
-            setReminders(reminders.filter(reminder => reminder.id !== id));
-        }
-
+//THIS IS THIS FILE'S EXPORT
+    render() {
         return(
             <div className="reminders">
-                <ReminderForm addReminder={addReminder} />
-                <ReminderList 
-                   reminders={reminders} 
-                   toggleComplete={toggleComplete}
-                   removeReminder={removeReminder}
-                   />
+               <AddReminder addReminderFn={this.addReminder}></AddReminder>
+               <ReminderList updateReminderFn={this.updateReminder} reminders={this.state.reminders}></ReminderList>
             </div>
         );
     }
 
+//THIS TURNS DATA INTO STRING WHICH IS REQUIRED BY LOCALSTORAGE
+    componentDidMount = () => {
+        const reminders = localStorage.getItem('reminders');
+        if(reminders) {
+            const savedReminders = JSON.parse(reminders);
+            this.setState({ reminders: savedReminders}); //reads "what do we want to set the reminders as?"
+        } else {
+            console.log('No reminders');
+        }
+    }
+//THIS IS THE FUNCTION THAT OUR PARENT FUNCTION 'RETURN'S
+//IT HANDLES THE RECEVIED DATA FROM THE PROP THAT'S ASSIGNED TO IT IN OUR RENDER FUNCTION
+    addReminder = async (reminder) => {
+        await this.setState({ reminders: [...this.state.reminders, { 
+            text: reminder,
+            completed: false
+        }] });
+        localStorage.setItem('reminders', JSON.stringify(this.state.reminders));
+        console.log(localStorage.getItem('reminders'))
+  };
+
+  updateReminder = async (reminder) => {
+    const newReminders = this.state.reminders.map(_reminder => {
+        if(reminder === _reminder)
+        return {
+            text: reminder.text,
+            completed: !reminder.completed
+        }
+        else 
+        return _reminder
+    });
+    await this.setState({ reminders: newReminders });
+    localStorage.setItem('reminders', JSON.stringify(this.state.reminders));
+  }
+
+
+}
 
 export default Reminders;
