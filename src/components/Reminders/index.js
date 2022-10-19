@@ -1,18 +1,26 @@
-import React from "react";
-import ReminderItem from "./ReminderItem/reminderItem";
-import ReminderList from "./ReminderList/reminderList";
-import AddReminder from "./AddReminder/addReminder";
+import { useState } from "react";
+import RmList from "./RmList";
 
-class Reminders extends React.Component {
+import './reminders.css';
 
-
-    render() {
+function Reminders(){
+  const [reminder, setReminder] = useState('Code Something');
         return(
-            <div className="reminders">
+        <div className="reminders"> 
+          <RmList></RmList>
+        </div>
 
-
+        //APPLE'S REMINDER APP DOM **Clone this**
+        /*
+            <div class="main-view"> //replaced with className="reminders"
+              <div class="sidebar regular"> 
+              <div class="rm-list"
             </div>
+
+            //SO YOU'RE GOING TO CREATE A COMPONENT FOR THE SIDEBAR and COMPONENT FOR THE RM-LIST
+              
+        */
         );
     }
-}
+
 export default Reminders;

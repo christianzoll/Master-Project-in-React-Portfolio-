@@ -26,12 +26,6 @@ body {
   position: relative;
 }
 
-.reminders form{ /* fixed form from being hidden behind it's parent div */
-  display: flex;
-  position: absolute; /* fixed form from being hidden behind it's parent div */
-  z-index: 9; /* fixed form from being hidden behind it's parent div */
-}
-
 .calc{
   grid-area: calcGridArea;
 }
