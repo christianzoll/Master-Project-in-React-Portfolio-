@@ -12,7 +12,7 @@ h1 {
   z-index:9;
 }
 
-.reminders * {
+.reminders > div {
   position: absolute; /* fixed form from being hidden behind it's parent div */
   z-index:9;
 

@@ -30,7 +30,7 @@ body {
   grid-area: calcGridArea;
 }
 
-.App div {
+.App > div {
   width: 99%;
   height: 355px;
   color: #38ed38;
@@ -41,14 +41,14 @@ body {
 /*border*/ overflow: hidden; /* cuts corners off rotating animation */
 }
 
-.App div::after{
+.App > div::after{
   content: ""; /* places gradient tile behind grid-area */
   position: absolute;
   background: #202020;
 /*border*/inset: 1px; /*makes the front div a little smaller than the back div */
 }
 
-.App div::before{
+.App > div::before{
 /*border*/ content: ""; /*gives space to the back div to appear */
 /*border*/ position: absolute;
 /*border*/ width: 100%;
