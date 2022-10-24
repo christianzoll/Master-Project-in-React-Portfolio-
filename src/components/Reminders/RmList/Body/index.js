@@ -2,7 +2,7 @@ import React from "react";
 
 function Body() {
     return(
-        <div class="rm-list-body"></div>
+        <div className="rm-list-body"></div>
     );
 }
 

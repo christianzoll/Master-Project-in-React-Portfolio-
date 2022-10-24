@@ -4,7 +4,7 @@ import RmList from "./RmList";
 import './reminders.css';
 
 function Reminders(){
-  const [reminder, setReminder] = useState('Code Something');
+
         return(
         <div className="reminders"> 
           <RmList></RmList>
