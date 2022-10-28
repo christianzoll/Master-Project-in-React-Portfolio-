@@ -17,8 +17,7 @@ function Footer(){
     }
   };
   useEffect(() => {
-    localStorage.setItem('reminders', JSON.stringify(reminders), [reminders])
-  })
+    localStorage.setItem('reminders', JSON.stringify(reminders)); }, [reminders]);
   return(
     <div className="rm-list-footer">
       <form onSubmit={handleSubmit}>
