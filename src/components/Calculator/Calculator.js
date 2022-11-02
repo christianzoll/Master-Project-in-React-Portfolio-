@@ -43,7 +43,6 @@ function Calculator() {
         console.log(appsJsReturnDiv)
      
   }
-}
 )}
 
 export default Calculator

@@ -2,7 +2,9 @@ import React from 'react'
 
 function MoneyBuddy() {
         return(
-            <div className="money-buddy"></div>
+            <div className="money-buddy">
+                
+            </div>
         );
     }
 
