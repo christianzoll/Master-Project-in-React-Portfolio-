@@ -1,12 +1,10 @@
 import React from 'react'
 
-class MoneyBuddy extends React.Component {
-    render() {
+function MoneyBuddy() {
         return(
             <div className="money-buddy"></div>
         );
     }
-}
 
 
 export default MoneyBuddy;

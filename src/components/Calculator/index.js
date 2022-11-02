@@ -1,13 +1,10 @@
 import React from 'react';
 import { digitKeys } from './digitKeys';
 
-class Calc extends React.Component {
-    render() {
+function Calc() {
         return(
             <div className="calc"></div>
         );
     }
-}
-
-
+    
 export default Calc;
