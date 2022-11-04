@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'
 
-function Footer(){
+function Footer({getDataFromChild}){
   const [reminder, setReminder] = useState("");  
   const [reminders, setReminders] = useState([]);
   const handleSubmit = (e) => {
@@ -19,6 +19,8 @@ function Footer(){
   };
   useEffect(() => {
     localStorage.setItem('reminders', JSON.stringify(reminders));}, [reminders]);
+
+    getDataFromChild(reminder, reminders);
   return(
     <div className="rm-list-footer">
       <form onSubmit={handleSubmit}>
