@@ -4,7 +4,6 @@ import RmList from "./RmList";
 import './reminders.css';
 
 function Reminders(){
-
         return(
         <div className="reminders"> 
           <RmList></RmList>

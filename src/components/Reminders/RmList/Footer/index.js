@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'
 
-function Footer(){
-  const [reminder, setReminder] = useState("");  
-  const [reminders, setReminders] = useState([]);
+function Footer({reminder, reminders, setReminder, setReminders}){
+  
+  console.log({reminders, reminder})
   const handleSubmit = (e) => {
       e.preventDefault();
       if (reminder){

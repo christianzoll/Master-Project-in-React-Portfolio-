@@ -1,8 +1,12 @@
 import React from "react";
 
-function Body() {
-    return(
+function Body({reminder, reminders}) {
+
+  console.log(reminders);
+  return(
         <div className="rm-list-body">
+
+          <li>{reminder}</li>
             <form>
               {//onfocus 
                 //radio exists
