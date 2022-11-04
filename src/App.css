@@ -10,7 +10,11 @@ body {
   "money-buddyGridArea remindersGridArea calcGridArea";
   background: inherit;
   border-radius: 5px;
-  
+}
+
+svg {
+  position: absolute;
+  z-index: 1;
 }
 
 .timeline{
