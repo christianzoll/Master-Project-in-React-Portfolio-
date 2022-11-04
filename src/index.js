@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode> memory link & async purpose reference: https://mariosfakiolas.com/blog/my-react-components-render-twice-and-drive-me-crazy/
     <App />
-  //  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,16 +1,14 @@
 import React from "react";
-import {useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Body from "./Body";
 
-function RmList() {  
-  const [reminders, setReminders] = useState([]);
+function RmList() {
   return(
     <div className="rm-list">
     <Header></Header>
-    <Body>{reminders}</Body>
-    <Footer  setReminders={setReminders}></Footer>
+    <Body></Body>
+    <Footer></Footer>
     </div>
   );
 }
