@@ -7,7 +7,10 @@ function Timeline() {
           <line x1="0" x2="100" y1="50" y2="50" stroke="orange"></line>
         </svg>
       </div>
+      //   console.log('Timeline shows up with the DOMContentLoaded document event listener')
       );
+  }
+  // }
 }
 
 export default Timeline
