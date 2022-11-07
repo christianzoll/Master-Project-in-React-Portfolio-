@@ -1,16 +1,10 @@
 import React from "react";
 
-function Body(props) {
-  // let reminders = props.reminders;
-  // let reminder = reminders.map((reminder) => {
-  //   return reminder;
-  // })
-
+function Body(reminder) {
+  
+console.log(reminder, "from Body");
     return(
         <div className="rm-list-body">
-        {/* <ul>{reminders}</ul> */}
-
-
 
             <form>
               {//onfocus 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css'
 
-function Footer({ callback }){
+function Footer({ linkToFooter }){
   const [reminder, setReminder] = useState("");  
   const [reminders, setReminders] = useState([]);
   const handleSubmit = (e) => {
@@ -29,7 +29,7 @@ function Footer({ callback }){
           value={reminder}
           onChange={(e) => setReminder(e.target.value)}
         />
-        <button onClick={() => callback(reminder)} type='submit'>+</button>
+        <button onClick={() => linkToFooter(reminder)} type='submit'>+</button>
       </form>
     </div>
   )
