@@ -4,14 +4,15 @@ import Footer from "./Footer";
 import Body from "./Body";
 
 function RmList() {
-  function getDataFromChild(data){
-    console.log(data);
-  }
+  const callThisFromChildComponent = (value) => {
+    console.log(value);
+  };
+  
   return(
     <div className="rm-list">
     <Header></Header>
     <Body></Body>
-    <Footer getDataFromChild={getDataFromChild}></Footer>
+    <Footer callback={callThisFromChildComponent}></Footer>
     </div>
   );
 }
