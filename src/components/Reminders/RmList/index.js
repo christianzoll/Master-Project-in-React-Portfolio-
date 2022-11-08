@@ -4,13 +4,13 @@ import Footer from "./Footer";
 import Body from "./Body";
 
 function RmList() {
-  const [reminder, setReminder] = useState("")
-  
+  const [reminders, setReminders] = useState([])
+  console.log(reminders, "from Parent");
   return(
     <div className="rm-list">
     <Header></Header>
-    <Body reminder={reminder}></Body>
-    <Footer linkToFooter={setReminder}></Footer>
+    <Body reminders={reminders}></Body>
+    <Footer setReminders={setReminders} reminders={reminders}></Footer>
     </div>
   );
 }

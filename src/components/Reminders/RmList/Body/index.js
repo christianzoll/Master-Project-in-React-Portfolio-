@@ -1,8 +1,8 @@
 import React from "react";
 
-function Body(reminder) {
-  
-console.log(reminder, "from Body");
+function Body({reminders}) {
+  console.log(reminders, "from Body");
+
     return(
         <div className="rm-list-body">
 
