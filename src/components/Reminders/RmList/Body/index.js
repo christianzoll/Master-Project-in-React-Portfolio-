@@ -8,7 +8,7 @@ function Body({reminders, setReminders}) {
     if (reminders) {
       setReminders(reminders);
     }
-  });
+  }, []);
 
   return(
     <div className="rm-list-body">
