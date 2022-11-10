@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function Body({reminders}) {
+function Body({reminders, setReminders}) {
   console.log(reminders, "from Body");
 
-    return(
-        <div className="rm-list-body">
+  useEffect(() => {
+    const reminders = JSON.parse(localStorage.getItem('reminders'));
+    if (reminders) {
+      setReminders(reminders);
+    }
+  });
 
-            <form>
-              {//onfocus 
-                //radio exists
-                //input text field
-              //offocus
-                //radio disappears
-                //input text field turns into paragraph
-            }
-            </form>
-        </div>
+  return(
+    <div className="rm-list-body">
+      {reminders.map((reminderItem) => {
+        const [{reminder, completed}] = reminders;
+         return(
+          <div>
+            <div></div>
+            <p>{reminder}</p>  
+          </div>
+         )
+      })}    
+    </div>
     );
 }
 
