@@ -9,7 +9,7 @@ function RmList() {
   return(
     <div className="rm-list">
     <Header></Header>
-    <Body reminders={reminders}></Body>
+    <Body reminders={reminders} setReminders={setReminders}></Body>
     <Footer setReminders={setReminders} reminders={reminders}></Footer>
     </div>
   );
