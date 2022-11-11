@@ -1,0 +1,8 @@
+.rm-list-body{
+    color: rgb(183, 187, 156);
+    font-size: small;
+}
+
+.reminder-card{
+    display: flex;
+}
