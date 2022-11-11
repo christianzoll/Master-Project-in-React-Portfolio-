@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./style.css"
 
 function Body({reminders, setReminders}) {
   console.log(reminders, "from Body");
@@ -13,10 +14,10 @@ function Body({reminders, setReminders}) {
   return(
     <div className="rm-list-body">
       {reminders.map((reminderItem) => {
-        const [{reminder, completed}] = reminders;
+        const { reminder, completed } = reminderItem;
          return(
-          <div>
-            <div></div>
+          <div className="reminder-card">
+            <input type="checkbox"></input>
             <p>{reminder}</p>  
           </div>
          )
