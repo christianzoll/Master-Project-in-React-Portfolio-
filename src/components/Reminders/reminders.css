@@ -2,7 +2,7 @@ h1 {
     color: rgb(253, 142, 32);
     color-scheme: dark;
     font-family: 'SF Pro Rounded';
-    src: url(../../../public/reminder-font.ttf);
+    src: url(../../../src/reminder-font.ttf);
     letter-spacing: .06em;
     font-size: 45%;
     padding: 3px;

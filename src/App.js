@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Timeline from './components/Timeline';
 import Reminders from './components/Reminders';
