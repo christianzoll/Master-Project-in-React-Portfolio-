@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RmList from "./RmList";
+import Header from "../../components/Header";
 
 import './reminders.css';
 
@@ -7,6 +8,7 @@ function Reminders(){
 
         return(
         <div className="reminders"> 
+          <Header name="Reminders"/>
           <RmList></RmList>
         </div>
 

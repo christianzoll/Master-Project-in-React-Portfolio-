@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Timeline from './components/Timeline';
-import Reminders from './components/Reminders';
-import MoneyBuddy from './components/MoneyBuddy';
-// import {Calc} from './components/Calc';
-import Calc from './components/Calculator';
+import Timeline from './sections/Timeline';
+import Reminders from './sections/Reminders';
+import MoneyBuddy from './sections/MoneyBuddy';
+// import {Calc} from './sections/Calc';
+import Calc from './sections/Calculator';
+
 
 function App() {
   return (
