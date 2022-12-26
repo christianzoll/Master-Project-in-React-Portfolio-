@@ -21,7 +21,8 @@ fetchReminders();
          return(
           <div className="reminder-card">
             <input type="checkbox"></input>
-            <p>{reminder}</p>  
+            <p>{reminder}</p> 
+            <p>{completed}</p> 
           </div>
          )
       })}    
