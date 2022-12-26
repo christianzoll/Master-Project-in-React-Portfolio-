@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./style.css"
+import {fetchReminders}  from '../../../../services/fetchReminders'
 
 function Body({reminders, setReminders}) {
   console.log(reminders, "from Body");
@@ -10,6 +11,8 @@ function Body({reminders, setReminders}) {
       setReminders(reminders);
     }
   }, []);
+
+fetchReminders();
 
   return(
     <div className="rm-list-body">
